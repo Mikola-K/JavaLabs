@@ -57,9 +57,9 @@ public final class App {
         allCreditList.getAllCredits().forEach(System.out::println);
 
         System.out.println("\n\n############# List of Deposits.");
-        allDepositList.getDeposits().forEach(System.out::println);
+        allDepositList.getAllDeposits().forEach(System.out::println);
         allDepositList.sortDepositsByTerm(SortOrder.ASC);
         System.out.println("\n\n############# Sorted deposit by term.");
-        allDepositList.getDeposits().forEach(System.out::println);
+        allDepositList.getAllDeposits().forEach(System.out::println);
     }
 }

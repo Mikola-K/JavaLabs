@@ -22,7 +22,7 @@ public final class BankServiceManager {
     private List<Credit> credits;
     private List<Deposit> deposits;
 
-    public BankServiceManager(final List<BankService> bankServices, String name) {
+    public BankServiceManager(List<BankService> bankServices, String name) {
         this.bankServices = bankServices;
     }
 
@@ -32,22 +32,6 @@ public final class BankServiceManager {
 
     public BankServiceManager(List<Deposit> depositList, int num) {
         this.deposits = depositList;
-    }
-
-    public void addBankServices(final List<BankService> bankServicesToAdd) {
-        bankServices.addAll(bankServicesToAdd);
-    }
-
-    public void removeBankServiceByIndex(final int index) {
-        bankServices.remove(index);
-    }
-
-    public void clearBankServiceList() {
-        bankServices.clear();
-    }
-
-    public BankService getBankServiceByIndex(final int index) {
-        return bankServices.get(index);
     }
 
     public List<BankService> getAllBankService() {

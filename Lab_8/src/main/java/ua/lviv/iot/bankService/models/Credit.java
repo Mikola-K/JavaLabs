@@ -1,12 +1,10 @@
 package ua.lviv.iot.bankService.models;
 
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.NonNull;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 @Data
+@NoArgsConstructor
 @ToString(callSuper = true)
 @FieldDefaults(makeFinal = false, level = AccessLevel.PROTECTED)
 
