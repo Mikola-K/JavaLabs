@@ -1,16 +1,23 @@
 package ua.lviv.iot.bankService.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-import lombok.experimental.FieldDefaults;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@FieldDefaults(makeFinal = false, level = AccessLevel.PROTECTED)
 
 public class BankService {
     @NonNull String bankName;
     @NonNull BankType bankType;
     @NonNull Boolean isAvailable;
     @NonNull float interestRate;
+
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    protected Integer id;
+
+    public BankService(final String bankName,final BankType bankType, final Boolean isAvailable,
+                       final float interestRate) {
+        this(bankName, bankType, isAvailable, interestRate, null);
+    }
 }
